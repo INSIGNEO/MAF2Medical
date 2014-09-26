@@ -12,7 +12,7 @@
 
 
 
-IF (${CMAKE_GENERATOR} STREQUAL "Visual Studio 9 2008" OR ${CMAKE_GENERATOR} STREQUAL "Visual Studio 10")
+IF (${CMAKE_GENERATOR} STREQUAL "Visual Studio 9 2008" OR ${CMAKE_GENERATOR} STREQUAL "Visual Studio 10" OR ${CMAKE_GENERATOR} STREQUAL "Visual Studio 10 Win64")
   OPTION(MAF_USE_CRYPTO "Find and Link the CRYPTO library." ON)
 INCLUDE (${MFL_SOURCE_PATH}/modules/PackagesMacro.cmake)
 INCLUDE (${MFL_SOURCE_PATH}/modules/PatchMacro.cmake)
@@ -125,4 +125,4 @@ IF (DEBUG_MESSAGES)
   							"${var} \"${${var}}\"\n")
   ENDFOREACH(var ${VARS})
 ENDIF (DEBUG_MESSAGES)
-ENDIF (${CMAKE_GENERATOR} STREQUAL "Visual Studio 9 2008" OR ${CMAKE_GENERATOR} STREQUAL "Visual Studio 10")
+ENDIF (${CMAKE_GENERATOR} STREQUAL "Visual Studio 9 2008" OR ${CMAKE_GENERATOR} STREQUAL "Visual Studio 10" OR ${CMAKE_GENERATOR} STREQUAL "Visual Studio 10 Win64")
